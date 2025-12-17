@@ -8,19 +8,18 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
+    
     public function run(): void
     {
-        // Call the UserSeeder, AdminSeeder, and EmployeeSeeder to safely seed users and employees from JSON data
+        
         $this->call([
             UserSeeder::class,
             AdminSeeder::class,
             EmployeeSeeder::class,
+            AttendanceSeeder::class,
         ]);
         
-        // Keep existing factory creation but make it safe too
+        
         User::firstOrCreate(
             ['email' => 'test@example.com'],
             [
