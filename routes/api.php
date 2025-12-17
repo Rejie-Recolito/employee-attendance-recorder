@@ -1,3 +1,4 @@
+
 <?php
 
 use App\Http\Controllers\UserController;
@@ -5,6 +6,8 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\AttendanceController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+Route::get('attendance/employee/{employee_id}', [AttendanceController::class, 'byEmployee']);
 
 Route::get('users/multiple', [UserController::class, 'multiple']);
 Route::patch('/users/bulk-update', [UserController::class, 'updateMultiple']);

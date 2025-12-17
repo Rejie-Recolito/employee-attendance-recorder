@@ -27,6 +27,16 @@ class User extends Authenticatable
         'phone_number',
         'profile_photo',
         'user_type',
+        'date_of_birth',
+        'place_of_birth',
+        'age',
+        'sex',
+        'address',
+        'job_title',
+        'department',
+        'status',
+        'date_of_service',
+        'salary',
     ];
 
     /**
